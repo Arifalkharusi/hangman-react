@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.App .word {
+  display: flex;
+  gap: 10px;
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add {
+  padding: 20px;
+}
+.add button {
+  padding: 10px;
+  cursor: pointer;
+  background: black;
+  color: white;
+  border: none;
+}
+.add input {
+  padding: 10px;
+  border: none;
+}
+.add input:focus {
+  outline-style: none;
+}
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: lightgray;
+}
+.letter:hover {
+  background: rgb(156, 156, 156);
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.overlay > div {
+  position: relative;
+}
+.overlay .close {
+  height: 40px;
+  width: 40px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  cursor: pointer;
+}
+.overlay .close:hover {
+  background: rgb(206, 206, 206);
+  color: red;
+}
+
+.overlay ul {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  line-height: 2;
+}
+.rule-btn {
+  border: 3px solid gold;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.play-again {
+  border: none;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.play-again:hover {
+  background: rgb(61, 61, 61);
+}
+.results {
+  font-size: 20px;
+  font-weight: bold;
+}
